@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "Ud6tZqleUheQlqQoOLhbZzU+3hW1q0PpEpuawBRIqhE=",
+  "Source": "PersonalWebSite.API",
+  "BasePath": "_content/PersonalWebSite.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

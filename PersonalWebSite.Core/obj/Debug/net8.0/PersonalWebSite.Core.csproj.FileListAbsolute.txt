@@ -1,0 +1,13 @@
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\bin\Debug\net8.0\PersonalWebSite.Core.deps.json
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\bin\Debug\net8.0\PersonalWebSite.Core.dll
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\bin\Debug\net8.0\PersonalWebSite.Core.pdb
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\PersonalWebSite.Core.csproj.AssemblyReference.cache
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\PersonalWebSite.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\PersonalWebSite.Core.AssemblyInfoInputs.cache
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\PersonalWebSite.Core.AssemblyInfo.cs
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\PersonalWebSite.Core.csproj.CoreCompileInputs.cache
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\PersonalWebSite.Core.sourcelink.json
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\PersonalWebSite.Core.dll
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\refint\PersonalWebSite.Core.dll
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\PersonalWebSite.Core.pdb
+C:\Users\Asus\OneDrive\Desktop\KişiselWebSite\PersonalWebSite.Core\obj\Debug\net8.0\ref\PersonalWebSite.Core.dll

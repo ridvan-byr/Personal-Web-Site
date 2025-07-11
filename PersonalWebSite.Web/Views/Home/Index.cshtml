@@ -1,0 +1,68 @@
+﻿@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-center mb-4">
+            <img src="~/images/4c0e784b-f8fe-4cca-b146-903e0c667940.jpg" alt="Rıdvan Emre Bayar" class="rounded-circle mb-4" style="width: 200px; height: 200px; object-fit: cover;">
+            <h1 class="display-4 mb-3">Rıdvan Emre Bayar</h1>
+            <h2 class="h4 text-muted mb-4">Bilgisayar Mühendisi</h2>
+            <p class="lead">Yazılım geliştirme, web teknolojileri ve yapay zeka konularında deneyimli bir bilgisayar mühendisiyim. Size yardımcı olmaktan mutluluk duyarım.</p>
+            <div class="social-links mt-4">
+                <a href="https://github.com/ridvan-byr" class="btn btn-outline-dark me-2" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/r%C4%B1dvan-emre-bayar-3226b134a/" class="btn btn-outline-primary me-2" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                    <h3 class="card-title">Yeteneklerim</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Web Geliştirme (ASP.NET, React)</li>
+                        <li class="mb-2">Veritabanı Yönetimi</li>
+                        <li class="mb-2">Yapay Zeka ve Makine Öğrenmesi</li>
+                        <li class="mb-2">Mobil Uygulama Geliştirme</li>
+                        <li>DevOps ve CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-briefcase fa-3x text-primary mb-3"></i>
+                    <h3 class="card-title">Deneyim</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Senior Software Developer</li>
+                        <li class="mb-2">Full Stack Developer</li>
+                        <li class="mb-2">AI Research Engineer</li>
+                        <li>Technical Lead</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <i class="fas fa-question-circle fa-3x text-primary mb-3"></i>
+                    <h3 class="card-title">Soru & Cevap</h3>
+                    <p class="card-text">Teknoloji ve yazılım konularında sorularınızı yanıtlamaktan mutluluk duyarım.</p>
+                    <a asp-controller="Question" asp-action="Index" class="btn btn-primary">
+                        <i class="fas fa-list"></i> Soruları Görüntüle
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

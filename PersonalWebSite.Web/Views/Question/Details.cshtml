@@ -1,0 +1,58 @@
+@model PersonalWebSite.Core.Models.Question
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title">@Model.Title</h2>
+                    <p class="card-text">@Model.Content</p>
+                    <div class="text-muted">
+                        <small>@Model.User.FirstName @Model.User.LastName tarafından @Model.CreatedAt.ToString("dd.MM.yyyy HH:mm") tarihinde soruldu</small>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="mb-3">Cevaplar</h3>
+            @foreach (var answer in Model.Answers.OrderByDescending(a => a.CreatedAt))
+            {
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <p class="card-text">@answer.Content</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">@answer.User.FirstName @answer.User.LastName tarafından @answer.CreatedAt.ToString("dd.MM.yyyy HH:mm") tarihinde cevaplandı</small>
+                            @if (User.IsInRole("Admin"))
+                            {
+                                <form asp-controller="Answer" asp-action="Delete" asp-route-id="@answer.Id" method="post" class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bu cevabı silmek istediğinizden emin misiniz?')">Sil</button>
+                                </form>
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+
+            @if (User.IsInRole("Admin"))
+            {
+                <div class="card">
+                    <div class="card-body">
+                        <h4>Cevap Yaz</h4>
+                        <form asp-controller="Answer" asp-action="Create" method="post">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="questionId" value="@Model.Id" />
+                            <div class="mb-3">
+                                <textarea name="content" class="form-control" rows="3" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Cevap Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div> 

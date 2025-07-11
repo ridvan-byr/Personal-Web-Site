@@ -1,0 +1,74 @@
+@model IEnumerable<PersonalWebSite.Core.Models.Question>
+
+@{
+    ViewData["Title"] = "Sorular";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col">
+            <h1>Sorular</h1>
+        </div>
+        <div class="col text-end">
+            @if (User.Identity?.IsAuthenticated == true)
+            {
+                <a asp-action="Create" class="btn btn-primary">Yeni Soru Sor</a>
+            }
+        </div>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            <i class="fas fa-info-circle"></i> Henüz hiç soru sorulmamış. İlk soruyu siz sorun!
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-8">
+                @foreach (var question in Model)
+                {
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                                <a asp-action="Details" asp-route-id="@question.Id" class="text-decoration-none">@question.Title</a>
+                            </h5>
+                            <p class="card-text">@(question.Content.Length > 200 ? question.Content.Substring(0, 200) + "..." : question.Content)</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <small class="text-muted">
+                                    @question.User.FirstName @question.User.LastName tarafından @question.CreatedAt.ToString("dd.MM.yyyy HH:mm") tarihinde soruldu
+                                </small>
+                                <div>
+                                    <span class="badge bg-primary me-2">@question.Answers.Count cevap</span>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <form asp-action="Delete" asp-route-id="@question.Id" method="post" class="d-inline">
+                                            @Html.AntiForgeryToken()
+                                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Bu soruyu silmek istediğinizden emin misiniz?')">
+                                                <i class="fas fa-trash"></i>
+                                            </button>
+                                        </form>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Soru Sorma Kuralları</h4>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success"></i> Sorunuzu net ve anlaşılır şekilde yazın</li>
+                            <li class="mb-2"><i class="fas fa-check text-success"></i> Teknoloji ve yazılım konularında sorular sorun</li>
+                            <li class="mb-2"><i class="fas fa-check text-success"></i> Gerekli detayları ekleyin</li>
+                            <li><i class="fas fa-check text-success"></i> Saygılı ve profesyonel bir dil kullanın</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div> 
